@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'listings',
     'realtors',
     'account',
+    'contacts',
     
 ]
 
@@ -139,7 +140,16 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
+#message
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+#email config
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_POST = 587
+EMAIL_HOST_USER ='ruhulinfo50@gmail.com'
+EMAIL_HOST_PASSWORD='ruhulkhan'
+EMAIL_USE_TLS = True
